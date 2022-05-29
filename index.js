@@ -14,7 +14,7 @@ mongoose.connect(process.env.DB_URI,{useNewUrlParser:true}).catch(err=>console.l
 
 
 
-// Basic Configuration
+// Basic Configurationn
 const port = process.env.PORT || 3000;
 
 app.use(cors());
