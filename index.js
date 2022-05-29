@@ -3,16 +3,14 @@ const express = require('express');
 const cors = require('cors');
 const app = express();
 const mongoose=require('mongoose');
-const res = require('express/lib/response');
-const req = require('express/lib/request');
+
 const dns=require("dns")
 const Url=require("./UrlModel");
-const { url } = require('inspector');
 
 
 //db
 
-mongoose.connect(process.env.DB_URI,{useNewUrlParser:true})
+mongoose.connect(process.env.DB_URI,{useNewUrlParser:true}).catch(err=>console.log(err.message))
 
 
 
